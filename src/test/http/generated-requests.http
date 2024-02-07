@@ -1,0 +1,41 @@
+### add attraction
+POST http://localhost:8080/attractions/add
+Content-Type: application/json
+
+{
+  "name": "Test",
+  "description": "TestedDescription"
+}
+
+<> 2024-02-07T131353.200.json
+<> 2024-02-07T125821.200.json
+<> 2024-02-07T125618.200.json
+
+### get all attractions
+GET http://localhost:8080/attractions
+
+<> 2024-02-07T131358.200.json
+<> 2024-02-07T131347.200.json
+<> 2024-02-07T131329.200.json
+<> 2024-02-07T131309.200.json
+<> 2024-02-07T130806.200.json
+<> 2024-02-07T130752.200.json
+<> 2024-02-07T125831.200.json
+<> 2024-02-07T125808.200.json
+<> 2024-02-07T125644.404.json
+
+### update McD description
+POST http://localhost:8080/attractions/update
+Content-Type: application/json
+
+{
+  "name": "McD",
+  "description": "New McD Description..."
+}
+
+<> 2024-02-07T130759.200.json
+
+### delete McD attraction
+GET http://localhost:8080/attractions/delete/McD
+
+<> 2024-02-07T131316.200.json

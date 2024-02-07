@@ -30,4 +30,29 @@ public class TouristRepository {
         }
         return null;
     }
+
+    public TouristAttraction addAttraction(TouristAttraction attraction) {
+        attractionList.add(attraction);
+        return attraction;
+    }
+
+    public TouristAttraction updateAttraction(TouristAttraction attraction) {
+        for(TouristAttraction ta : attractionList) {
+            if(ta.getName().equalsIgnoreCase(attraction.getName())) {
+                ta.setDescription(attraction.getDescription());
+                return ta;
+            }
+        }
+        return null;
+    }
+
+    public TouristAttraction deleteAttraction(String name) {
+        for(TouristAttraction ta : attractionList) {
+            if(ta.getName().equalsIgnoreCase(name)) {
+                attractionList.remove(ta);
+                return ta;
+            }
+        }
+        return null;
+    }
 }

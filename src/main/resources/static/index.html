@@ -1,28 +1,221 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="myid" data-bs-theme="light">
 <head>
     <meta charset="UTF-8">
     <title>Tourist Guide</title>
     <link rel="stylesheet" href="css/main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 <body>
+<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+    <symbol id="check2" viewBox="0 0 16 16">
+        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+    </symbol>
+    <symbol id="circle-half" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+    </symbol>
+    <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+        <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+        <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+    </symbol>
+    <symbol id="sun-fill" viewBox="0 0 16 16">
+        <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+    </symbol>
+</svg>
 
-    <img class="center" width="100" height="100"
-         alt="orange filled circle with a bold lowercase i cutout in the middle"
-         src="images/info-icon.png">
-    <h1 class="center">Tourist Guide </h1>
-    <nav class="center">
-        <div><a href="/attractions">See all attractions</a></div>
-        <div><a href="/attractions/McD">McD</a></div>
-        <div><a href="/attractions/delete/McD">Delete McD</a></div>
-    </nav>
-    <div class="center">
-        <ul class="no-dot my-list">
-            <li><a href="/attractions">See all attractions</a></li>
-            <li><a href="/attractions/McD">McD</a></li>
-            <li><a href="/attractions/delete/McD">Delete McD</a></li>
-        </ul>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+<script src="js/color-modes.js"></script>
+
+
+<div class="container">
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom border-dark-subtle">
+        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+            <img class="me-2" width="30" height="30"
+                 alt="orange filled circle with a bold lowercase i cutout in the middle"
+                 src="images/info-icon.png">
+            <span class="fs-4">Tourist Guide</span>
+        </a>
+        <button class="btn" data-bs-theme-value="light">
+            <svg fill="yellow" class="bi me-2 theme-icon" width="1em" height="1em">
+                <use href="#sun-fill"></use>
+            </svg>
+        </button>
+        <button class="btn" data-bs-theme-value="dark">
+            <svg fill="black" class="bi me-2 theme-icon" width="1em" height="1em">
+                <use href="#moon-stars-fill"></use>
+            </svg>
+        </button>
+        <nav class="navbar navbar-expand-lg" aria-label="Tenth navbar example">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample08">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/">home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/attractions">attractions</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/attractions/McD">McD</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Delete McD</a>
+                        </li>
+                        <!--                        <li class="nav-item dropdown">-->
+                        <!--                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"-->
+                        <!--                               aria-expanded="false">Endpoints</a>-->
+                        <!--                            <ul class="dropdown-menu">-->
+                        <!--                                <li><a class="dropdown-item" href="/attractions">attractions</a></li>-->
+                        <!--                                <li><a class="dropdown-item" href="/attractions/McD">McD</a></li>-->
+                        <!--                                <li><a class="dropdown-item" href="/attractions/delete/McD">Delete McD</a></li>-->
+                        <!--                            </ul>-->
+                        <!--                        </li>-->
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+                    aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="img-fluid w-100 h-100"
+                     src="https://assets.editorial.aetnd.com/uploads/2011/06/gettyimages-142198198.jpg?width=640&height=426.66666666666663&crop=640%3A426.66666666666663%2Csmart&quality=75&auto=webp">
+                <div class="container">
+                    <div class="carousel-caption text-start">
+                        <h1>Eiffel Tower</h1>
+                        <p class="opacity-100">The Eiffel Tower is a feat of ingenuity as much as it is a famous
+                            landmark. This structure of 8,000 metallic parts was designed by Gustave Eiffel as a
+                            temporary exhibit for the World Fair of 1889.</p>
+                        <p><a class="btn btn-lg btn-dark" href="#">Learn More</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="img-fluid w-100 h-100"
+                     src="https://th-thumbnailer.cdn-si-edu.com/RqxjpcWzxMdN17OWtqJJsGjxDBE=/1000x750/filters:no_upscale()/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/12/d0/12d08a47-a37c-4df8-a448-95fba1dd6c15/louvre.jpg">
+                <div class="container">
+                    <div class="carousel-caption text-end">
+                        <h1>Musée du Louvre</h1>
+                        <p>The most prestigious museum in Paris, the Louvre ranks among the top European collections of
+                            fine arts.</p>
+                        <p><a class="btn btn-lg btn-dark" href="#">Learn more</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="img-fluid w-100 h-100"
+                     src="https://www.paristoversailles.com/wp-content/uploads/chateau_versailles_night.png">
+                <div class="container">
+                    <div class="carousel-caption text-end">
+                        <h1>Château de Versailles</h1>
+                        <p>The UNESCO-listed Château de Versailles immerses you in France's glorious regal history. Step
+                            back in time to the era of the ancien régime, when Louis XIV (the "Sun King"), Louis XV, and
+                            Louis XVI ruled France. During that period, the Palace of Versailles set the standard for
+                            princely courts in Europe.</p>
+                        <p><a class="btn btn-lg btn-dark" href="#">Learn More</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
+
+
+</div>
+
+<div class="container">
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+        <div class="col-md-7">
+            <h2 class="featurette-heading fw-normal lh-1">Côte d'Azur</h2>
+            <p class="lead">The most fashionable stretch of coastline in France, the Côte d'Azur extends from
+                Saint-Tropez to Menton near the border with Italy. Côte d'Azur translates to "Coast of Blue," a fitting
+                name to describe the Mediterranean's mesmerizing cerulean waters.</p>
+        </div>
+        <div class="col-md-5">
+            <img class="img fluid w-100 h-100" width="500px" height="500px"
+                 src="https://www.planetware.com/photos-large/F/france-cote-d-azure.jpg"/>
+        </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading fw-normal lh-1">Mont Saint-Michel</h2>
+            <p class="lead">Rising dramatically from a rocky islet off the Normandy coast, the UNESCO-listed Mont
+                Saint-Michel is one of France's most striking landmarks. This "Pyramid of the Seas" is a mystical sight,
+                perched 80 meters above the bay and surrounded by imposing defensive walls and bastions.</p>
+        </div>
+        <div class="col-md-5 order-md-1">
+            <img class="img-fluid w-100 h-100" width="500px" height="500px"
+                 src="https://www.planetware.com/photos-large/F/france-mont-saint-michel-2.jpg">
+        </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+        <div class="col-md-7">
+            <h2 class="featurette-heading fw-normal lh-1">Castles of the Loire Valley</h2>
+            <p class="lead">Traveling through the Loire Valley gives the impression of stepping into a children's
+                storybook. Turreted fairy-tale castles grace a luxuriant countryside of dense woodlands and gently
+                flowing rivers. The entire Loire Valley, an area known as the "Garden of France," is listed as a UNESCO
+                World Heritage Site.</p>
+        </div>
+        <div class="col-md-5">
+            <img class="img-fluid w-100 h-100" width="500px" height="500px"
+                 src="https://www.planetware.com/photos-large/F/france-loire-valley.jpg">
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <footer class="d-flex align-items-center py-3 my-4 border-top border-dark-subtle">
+        <p class="col-md-4 mb-0 text-body-secondary">&copy; 2024 Evil Corp</p>
+
+        <a href="/"
+           class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+            <img src="images/info-icon.png" wwidth="20px" height="20px">
+        </a>
+        <p>content from <a href="https://www.planetware.com/tourist-attractions/france-f.htm">www.planetware.com</a></p>
+    </footer>
+</div>
+
+<!--<img class="center" width="100" height="100"-->
+<!--     alt="orange filled circle with a bold lowercase i cutout in the middle"-->
+<!--     src="images/info-icon.png">-->
+<!--<h1 class="center">Tourist Guide </h1>-->
+<!--<nav class="center">-->
+<!--    <div><a href="/attractions">See all attractions</a></div>-->
+<!--    <div><a href="/attractions/McD">McD</a></div>-->
+<!--    <div><a href="/attractions/delete/McD">Delete McD</a></div>-->
+<!--</nav>-->
 
 </body>
 </html>

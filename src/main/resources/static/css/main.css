@@ -22,3 +22,11 @@ body {
     margin-top: 0;
     padding-left: 0;
 }
+
+.carousel-item {
+    height: 25rem;
+}
+
+.carousel-caption {
+    color: white !important;
+}

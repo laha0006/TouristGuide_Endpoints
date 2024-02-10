@@ -1,32 +1,8 @@
-body {
-    background-color: #090909;
-    color: #EF7900;
+.carousel-inner {
+    height: 32rem;
 }
 
-.center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-}
-
-.my-list {
-    text-align: center;
-    display: inline-block;
-    list-style-position: inside;
-}
-
-.no-dot {
-    list-style-type: none;
-    padding-top: 0;
-    margin-top: 0;
-    padding-left: 0;
-}
-
-.carousel-item {
-    height: 25rem;
-}
-
-.carousel-caption {
-    color: white !important;
+.carousel-item img {
+    width: 100% !important;
+    height: 32rem !important;
 }
